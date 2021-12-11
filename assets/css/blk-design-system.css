@@ -13685,7 +13685,7 @@ img {
   padding: 0.9375rem;
   width: 100%;
   z-index: 1050;
-  background: #e14eca;
+  background: #5b48c1;
 }
 
 .navbar .photo {
@@ -16407,11 +16407,11 @@ textarea.form-control:active {
 
 .index-page .squares {
   animation: move-left-right 1s infinite;
-  background: #ba54f5;
-  background: -webkit-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+  background: #3c00f3;
+  background: -webkit-linear-gradient(0deg, #1b00f9 0%, #0008ff 100%);
   background: -o-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
   background: -moz-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
-  background: linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+  background: linear-gradient(0deg, #421c8d 0%, #402976 100%);
   position: absolute;
   transition: 0.5s ease-out;
   overflow: hidden;

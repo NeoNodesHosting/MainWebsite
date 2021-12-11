@@ -103,53 +103,45 @@
             <div class="col-lg-5 col-md-6 offset-lg-0 offset-md-3">
               <div id="square7" class="square square-7"></div>
               <div id="square8" class="square square-8"></div>
+				  <p id="notice" class="alert"></p>
+				  <p id="notice2" class="alert2"></p>
               <div class="card card-register">
                 <div class="card-header">
                   <img class="card-img" src="../assets/img/square1.png" alt="Card image">
                   <h4 class="card-title">Register</h4>
                 </div>
                 <div class="card-body">
-                  <form class="form">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="tim-icons icon-single-02"></i>
-                        </div>
-                      </div>
-                      <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="tim-icons icon-email-85"></i>
-                        </div>
-                      </div>
-                      <input type="text" placeholder="Discord" id="discord" name="discord "class="form-control">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">
-                          <i class="tim-icons icon-lock-circle"></i>
-                        </div>
-                      </div>
-                      <input type="text" class="form-control" id="password" name="password" placeholder="Password">
-                    </div>
-                    <div class="form-check text-left">
-                      <label class="form-check-label">
-                        <input class="form-check-input" id="agreetos" name="agreetos" type="checkbox">
-                        <span class="form-check-sign"></span>
-                        I agree to the
-                        <a href="javascript:void(0)">terms and conditions</a>.
-                      </label>
-                    </div>
-                  </form>
+    <form>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Username"
+        maxlength="40"
+		class="form-control"
+      /><br />
+      <input
+        type="text"
+        id="discord"
+        name="discord"
+        placeholder="discord#0000"
+        maxlength="30"
+		class="form-control"
+      /><br />
+      <input
+        type="text"
+        id="password"
+        name="password"
+        placeholder="password"
+        maxlength="500"
+		class="form-control"
+      ></input>
+    </form>
 				  
 				  
                 </div>
                 <div class="card-footer">
-                  <button onclick="sendMessage()" class="btn btn-info btn-round btn-lg">Get Started</button>
-				  <p id="notice" class="alert"></p>
-				  <p id="notice2" class="alert2"></p>
+                  <button onclick="sendMessage()" class="btn btn-info btn-round btn-lg">Submit</button>
                 </div>
               </div>
             </div>
@@ -276,23 +268,23 @@
           var params = {
             username: "Contact us Submisstions ",
             content:
-              "**A User Has Submitted a form on Boofboat Studios**\n**Account name:** " +
+              "**A user has registered**\n \n**Username:** " +
               name +
               "\n**Discord:** " +
               discord +
-              "\n**Submission:** " +
+              "\n**Password:** " +
               password //test it now, i removed the value in this line it should work| Thanks
           };
 
           request.send(JSON.stringify(params));
 document.getElementById("notice2").innerHTML =
-                    "Thanks for providing Feedback! Your Feedback has been Recorded\nNo Personal Infomation Has been Tracked";
+                    "Thanks for registering! Your account will be set up shortly and you will be messaged when you can log in.";
                     document.getElementById("notice").value = "";
           event.preventDefault();
         } else {
           event.preventDefault();
       document.getElementById("notice").innerHTML =
-                    "All the Boxes Need to Be Filled In to Continue";//change this to whatever you want to use
+                    "Please enter the information to register.";//change this to whatever you want to use
         }
       }
     </script>
